@@ -32,6 +32,10 @@ public class ChronoActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // The ViewModelStore provides a new ViewModel or one previously created.
+
+        /* this refers to an instance of LifecycleOwner. The framework keeps the ViewModel alive as long as the scope of the LifecycleOwner is alive.
+         * A ViewModel is not destroyed if its owner is destroyed for a configuration change, such as screen rotation.
+         * The new instance of the owner re-connects to the existing ViewModel **/
         ChronometerViewModel chronometerViewModel
                 = new ViewModelProvider(this).get(ChronometerViewModel.class);
 
